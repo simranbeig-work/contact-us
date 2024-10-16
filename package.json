@@ -1,0 +1,27 @@
+{
+  "name": "contact-us",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/simranbeig-work/contact-us.git"
+  },
+  "author": "Simran Beig",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/simranbeig-work/contact-us/issues"
+  },
+  "homepage": "https://github.com/simranbeig-work/contact-us#readme",
+  "dependencies": {
+    "express": "^4.21.1",
+    "mysql": "^2.18.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.7"
+  }
+}
