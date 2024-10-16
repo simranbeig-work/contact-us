@@ -2,14 +2,14 @@ const express = require("express");
 const router = express.Router();
 const db = require("../config/db");
 
-router.get("/", (req, res) => {
+router.get("/contactus", (req, res) => {
   db.query("SELECT * FROM ContactSubmissions", (err, results) => {
     if (err) throw err;
     res.json(results);
   });
 });
 
-router.get("/:id", (req, res) => {
+router.get("/contactus/:id", (req, res) => {
   const { id } = req.params;
   db.query(
     "SELECT * FROM ContactSubmissions WHERE id = ?",
@@ -21,7 +21,7 @@ router.get("/:id", (req, res) => {
   );
 });
 
-router.post("/", (req, res) => {
+router.post("/contactus", (req, res) => {
   const { full_name, email, phone_number, message } = req.body;
   const query =
     "INSERT INTO ContactSubmissions (full_name, email, phone_number, message) VALUES (?, ?, ?, ?)";
@@ -31,7 +31,7 @@ router.post("/", (req, res) => {
   });
 });
 
-router.put("/:id", (req, res) => {
+router.put("/contactus/:id", (req, res) => {
   const { id } = req.params;
   const { full_name, email, phone_number, message } = req.body;
   const query =
